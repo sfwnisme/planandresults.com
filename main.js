@@ -10,6 +10,9 @@ navIcon.addEventListener("click", (e) => {
   navIcon.firstElementChild.classList.toggle("active");
   // logo.src = "./assets/images/logo-white.png";
   logo.src = "./assets/images/logo.png";
+  if (!navCont.classList.contains("active")) {
+    logo.src = "./assets/images/logo-white.png";
+  }
 });
 
 console.log(logo);
