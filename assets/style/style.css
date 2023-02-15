@@ -730,11 +730,12 @@ article .cont .box .text-box .content-text {
 @media (max-width: 767px) {
   article .cont .box .text-box .content-text {
     gap: 30px;
+    flex-direction: column;
   }
 }
 @media (max-width: 480px) {
   article .cont .box .text-box .content-text {
-    gap: 30px;
+    gap: 20px;
   }
 }
 article .cont .box .text-box .content-text p {
