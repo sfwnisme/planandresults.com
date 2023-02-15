@@ -3,6 +3,10 @@
 /* KOTO */
 @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+::selection {
+  background-color: var(--traffic-color);
+}
+
 html {
   direction: rtl;
 }
@@ -138,8 +142,6 @@ hr {
   align-items: center;
   gap: 25px;
   border: 1px solid var(--font-main-color);
-  /*padding: 5px 20px 5px 0px;
-  */
   padding: 10px 15px;
   border-radius: 30px;
   -webkit-border-radius: 30px;
@@ -253,7 +255,7 @@ hr {
   -moz-transform: rotate(225deg);
   -ms-transform: rotate(225deg);
   -o-transform: rotate(225deg);
-  background-color: var(--main-color);
+  background-color: var(--main-color-light);
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -274,7 +276,6 @@ nav {
   width: 100%;
   height: 110px;
   z-index: 3;
-  /* padding-inline: 15px; */
 }
 
 @media (max-width: 767px) {
@@ -290,27 +291,7 @@ nav .cont {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding-block: 10px; */
-  /* border-bottom: 1px solid var(--font-primary-color); */
   height: 100%;
-  position: relative;
-  /* margin-inline: 50px; */
-  /* width: 90%; */
-}
-nav .cont::before {
-  /* content: ""; */
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  background-color: var(--border-color);
-  height: 0.5px;
-  /* width: calc(100% - 6vw); */
-  width: 100%;
 }
 nav .cont figure {
   width: 60px;
@@ -381,6 +362,7 @@ nav .cont ul li {
     width: inherit;
     padding: 0px 0px;
     height: 80px;
+    justify-content: start;
   }
 }
 
@@ -400,6 +382,7 @@ nav .cont ul li a {
     color: var(--font-main-color);
     font-size: 20px;
     width: inherit;
+    flex-grow: 1;
   }
 }
 nav .cont ul li a::before {
@@ -456,6 +439,27 @@ nav .cont ul li:hover svg.arrow {
   background-color: var(--main-color);
 
   fill: var(--font-primary-color);
+}
+nav .cont ul li.nav-social {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  width: auto;
+  gap: 10px;
+}
+nav .cont ul li.nav-social a {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+nav .cont ul li.nav-social-active {
+  display: flex;
 }
 nav .cont .nav-icon {
 }
@@ -653,7 +657,7 @@ main .cont .get-in-touch a figure svg:last-of-type {
 
 /* ==========[START ABOUT US]========== */
 article {
-  padding-block: 60px;
+  padding-block: 100px;
   /* border-bottom: 1px solid black; */
 }
 article .cont {
@@ -715,7 +719,7 @@ article .cont .box .text-box h1 {
 article .cont .box .text-box .content-text {
   display: flex;
   justify-content: center;
-  gap: 100px;
+  gap: 60px;
   margin-bottom: 30px;
 }
 @media (max-width: 1199px) {
@@ -724,7 +728,7 @@ article .cont .box .text-box .content-text {
 }
 @media (max-width: 1023px) {
   article .cont .box .text-box .content-text {
-    gap: 50px;
+    gap: 40px;
   }
 }
 @media (max-width: 767px) {
@@ -739,13 +743,13 @@ article .cont .box .text-box .content-text {
   }
 }
 article .cont .box .text-box .content-text p {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.6;
 }
 @media (max-width: 1199px) {
   article .cont .box .text-box .content-text p {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 @media (max-width: 767px) {
@@ -758,14 +762,40 @@ article .cont .box .text-box .content-text p {
   }
 }
 article .cont .box .text-box .content-text p:first-of-type {
+  flex-shrink: 0;
+  max-width: 300px;
+}
+@media (max-width: 1199px) {
+  article .cont .box .text-box .content-text p:first-of-type {
+    flex-shrink: 0;
+    max-width: 300px;
+  }
+}
+@media (max-width: 1023px) {
+  article .cont .box .text-box .content-text p:first-of-type {
+    flex-shrink: 0;
+    max-width: 300px;
+  }
+}
+@media (max-width: 767px) {
+  article .cont .box .text-box .content-text p:first-of-type {
+    flex-grow: 1;
+    max-width: initial;
+  }
+}
+@media (max-width: 480px) {
+  article .cont .box .text-box .content-text p {
+    font-size: 14px;
+  }
 }
 article .cont .box .text-box .content-text p:last-of-type {
+  flex-grow: 1;
 }
 
 /* ==========[START SERVICES]========== */
 
 section {
-  padding-block: 60px;
+  padding-block: 100px;
 }
 section .cont {
 }
