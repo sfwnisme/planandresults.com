@@ -496,7 +496,7 @@ main {
   align-items: center;
   justify-content: center;
   background-image: url(../images/bg5.jpg);
-  background-position: center, center;
+  background-position: right, center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
