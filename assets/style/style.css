@@ -319,7 +319,8 @@ nav .cont ul {
     visibility: hidden;
     background-color: var(--font-primary-color);
     width: 100%;
-    height: calc(100svh - 109px);
+    /* height: calc(100svh - 109px); */
+    height: 100svh;
     flex-direction: column;
     justify-content: flex-start;
     position: fixed;
@@ -348,7 +349,8 @@ nav .cont ul {
 }
 @media (max-width: 767px) {
   nav .cont ul {
-    height: calc(100svh - 70px);
+    /* height: calc(100svh - 70px); */
+    height: 100svh;
     top: 70px;
   }
 }
@@ -406,13 +408,40 @@ nav .cont ul li a::before {
 nav .cont ul li:hover a::before {
   width: 100%;
 }
+@media (max-width: 1023px) {
+  nav .cont ul li .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: 200ms background-color;
+    -webkit-transition: 200ms background-color;
+    -moz-transition: 200ms background-color;
+    -ms-transition: 200ms background-color;
+    -o-transition: 200ms background-color;
+    background-color: transparent;
+  }
+}
 @media (min-width: 1024px) {
-  nav .cont ul li svg.arrow {
+  nav .cont ul li .arrow {
     display: none;
   }
 }
-nav .cont ul li svg.arrow {
+
+nav .cont ul li:hover .arrow {
+  background-color: var(--main-color);
+}
+
+nav .cont ul li .arrow svg {
   fill: var(--font-main-color);
+  box-sizing: unset;
+  width: 28px;
+  height: 28px;
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -423,25 +452,15 @@ nav .cont ul li svg.arrow {
   -moz-transition: 200ms;
   -ms-transition: 200ms;
   -o-transition: 200ms;
-  width: 40px;
-  height: 40px;
-  padding: 6px;
-  /* box-sizing:unset; */
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  transition-property: fill, transform;
 }
-nav .cont ul li:hover svg.arrow {
+nav .cont ul li:hover .arrow svg {
+  fill: var(--font-primary-color);
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
   -moz-transform: rotate(-135deg);
   -ms-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);
-  background-color: var(--main-color);
-
-  fill: var(--font-primary-color);
 }
 nav .cont ul li.nav-social {
   display: none;
