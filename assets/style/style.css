@@ -15,6 +15,15 @@ html {
   padding: 0;
   box-sizing: border-box;
 }
+[data-aos-anchor-placement],
+[data-aos] {
+  transition: 1000ms !important;
+  -webkit-transition: 1000ms !important;
+  -moz-transition: 1000ms !important;
+  -ms-transition: 1000ms !important;
+  -o-transition: 1000ms !important;
+  transition-property: opacity, transform;
+}
 body,
 * {
   font-family: "Alexandria", sans-serif;
@@ -319,8 +328,8 @@ nav .cont ul {
     visibility: hidden;
     background-color: var(--font-primary-color);
     width: 100%;
-    /* height: calc(100svh - 109px); */
-    height: 100svh;
+    height: calc(100svh - 109px);
+    /* height: 100svh; */
     flex-direction: column;
     justify-content: flex-start;
     position: fixed;
@@ -349,8 +358,8 @@ nav .cont ul {
 }
 @media (max-width: 767px) {
   nav .cont ul {
-    /* height: calc(100svh - 70px); */
-    height: 100svh;
+    height: calc(100svh - 70px);
+    /* height: 100svh; */
     top: 70px;
   }
 }
