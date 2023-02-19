@@ -17,11 +17,11 @@ html {
 }
 [data-aos-anchor-placement],
 [data-aos] {
-  transition: 1000ms !important;
-  -webkit-transition: 1000ms !important;
-  -moz-transition: 1000ms !important;
-  -ms-transition: 1000ms !important;
-  -o-transition: 1000ms !important;
+  transition: 500ms !important;
+  -webkit-transition: 500ms !important;
+  -moz-transition: 500ms !important;
+  -ms-transition: 500ms !important;
+  -o-transition: 500ms !important;
   transition-property: opacity, transform;
 }
 body,
@@ -134,7 +134,7 @@ section {
     font-size: 16px;
   }
 }
-.inline-title {
+.title-inline {
   padding-bottom: 60px;
 }
 
@@ -1527,3 +1527,80 @@ section.why-us .cont .box .text-box .results .result p {
 }
 
 /* ==========[END WHY CHOOSE US]========== */
+/* ==========[START RATES]========== */
+
+section.rates {
+}
+section.rates .cont {
+}
+section.rates .cont .box {
+}
+section.rates .cont .box .special-title {
+  display: flex;
+  /* justify-content: space-between; */
+  margin-bottom: 100px;
+}
+section.rates .cont .box .special-title .title {
+}
+section.rates .cont .box .special-title .title h2 {
+  /* width: fit-content;/ */
+}
+
+section.rates .cont .box .special-title h1 {
+  font-size: 50px;
+  font-weight: 300;
+  margin-right: auto;
+  max-width: 800px;
+}
+section.rates .cont .box .charts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+section.rates .cont .box .charts .chart {
+  /* width: 400px; */
+  flex-basis: 45%;
+}
+section.rates .cont .box .charts .chart h4 {
+  color: var(--font-primary-color);
+  background-color: var(--traffic-color);
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 3px 20px;
+  margin-bottom: 20px;
+  border: 1px solid var(--traffic-color);
+  width: fit-content;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+section.rates .cont .box .charts .chart .chart-cont {
+  /* border: 10px solid black; */
+  width: 100%;
+}
+section.rates .cont .box .charts .chart .chart-cont canvas {
+  /* width: 100%; */
+  /* background-color: black; */
+}
+section.rates .cont .box .charts .chart.chart-one {
+}
+section.rates .cont .box .charts .chart.chart-one h4 {
+}
+section.rates .cont .box .charts .chart.chart-one .chart-cont {
+}
+section.rates .cont .box .charts .chart.chart-one .chart-cont canvas {
+}
+section.rates .cont .box .charts .chart.chart-two {
+}
+section.rates .cont .box .charts .chart.chart-two h4 {
+}
+section.rates .cont .box .charts .chart.chart-two .chart-cont {
+}
+section.rates .cont .box .charts .chart.chart-two .chart-cont canvas {
+}
+
+/* ==========[END RATES]========== */
