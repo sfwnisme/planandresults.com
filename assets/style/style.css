@@ -1540,6 +1540,31 @@ section.rates .cont .box .special-title {
   /* justify-content: space-between; */
   margin-bottom: 100px;
 }
+@media (max-width: 1199px) {
+  section.rates .cont .box .special-title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 1023px) {
+  section.why-us .cont .box .text-box .results .result p {
+    font-size: 16px;
+    font-weight: 200;
+  }
+}
+@media (max-width: 767px) {
+  section.why-us .cont .box .text-box .results .result p {
+    font-size: 16px;
+    font-weight: 200;
+  }
+}
+@media (max-width: 480px) {
+  section.why-us .cont .box .text-box .results .result p {
+    font-size: 10px;
+    font-weight: 100;
+  }
+}
 section.rates .cont .box .special-title .title {
 }
 section.rates .cont .box .special-title .title h2 {
@@ -1552,40 +1577,107 @@ section.rates .cont .box .special-title h1 {
   margin-right: auto;
   max-width: 800px;
 }
+@media (max-width: 1199px) {
+  section.rates .cont .box .special-title h1 {
+    font-size: 45px;
+    font-weight: 300;
+    margin-right: auto;
+    max-width: 800px;
+  }
+}
+@media (max-width: 1023px) {
+  section.rates .cont .box .special-title h1 {
+    font-size: 45px;
+    font-weight: 300;
+    margin-right: auto;
+    max-width: 800px;
+  }
+}
+@media (max-width: 767px) {
+  section.rates .cont .box .special-title h1 {
+    font-size: 35px;
+    font-weight: 300;
+    margin-right: 0;
+    max-width: 800px;
+  }
+}
+@media (max-width: 480px) {
+  section.rates .cont .box .special-title h1 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-right: 0;
+    max-width: 800px;
+  }
+}
 section.rates .cont .box .charts {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   margin-bottom: 100px;
 }
 section.rates .cont .box .charts .chart {
-  /* width: 400px; */
-  flex-basis: 45%;
+  margin-right: auto;
+  width: 800px;
 }
-section.rates .cont .box .charts .chart h4 {
-  color: var(--font-primary-color);
-  background-color: var(--traffic-color);
-  text-align: center;
-  font-size: 15px;
-  font-weight: 400;
-  padding: 3px 20px;
-  margin-bottom: 20px;
-  border: 1px solid var(--traffic-color);
-  width: fit-content;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+@media (max-width: 1199px) {
+  section.rates .cont .box .charts .chart {
+    margin-right: auto;
+    width: 800px;
+  }
 }
+@media (max-width: 1023px) {
+  section.rates .cont .box .charts .chart {
+    margin-right: auto;
+    width: 800px;
+  }
+}
+@media (max-width: 767px) {
+  section.rates .cont .box .charts .chart {
+    margin-right: 0;
+    width: 800px;
+  }
+}
+@media (max-width: 480px) {
+  section.rates .cont .box .charts .chart {
+    margin-right: 0;
+    width: 800px;
+  }
+}
+
 section.rates .cont .box .charts .chart .chart-cont {
-  /* border: 10px solid black; */
-  width: 100%;
+  max-width: 100%;
+  /* max-height: 100%; */
 }
+
 section.rates .cont .box .charts .chart .chart-cont canvas {
-  /* width: 100%; */
-  /* background-color: black; */
+  background-color: rgb(62, 0, 66);
+  padding: 10px;
 }
+@media (max-width: 1199px) {
+  section.rates .cont .box .charts .chart .chart-cont canvas {
+    background-color: rgb(62, 0, 66);
+    padding: 10px;
+  }
+}
+@media (max-width: 1023px) {
+  section.rates .cont .box .charts .chart .chart-cont canvas {
+    background-color: rgb(62, 0, 66);
+    padding: 10px;
+  }
+}
+@media (max-width: 767px) {
+  section.rates .cont .box .charts .chart .chart-cont canvas {
+    background-color: rgb(62, 0, 66);
+    padding: 10px;
+  }
+}
+@media (max-width: 480px) {
+  section.rates .cont .box .charts .chart .chart-cont canvas {
+    background-color: rgb(62, 0, 66);
+    padding: 10px;
+  }
+}
+
 section.rates .cont .box .charts .chart.chart-one {
 }
 section.rates .cont .box .charts .chart.chart-one h4 {
@@ -1593,14 +1685,6 @@ section.rates .cont .box .charts .chart.chart-one h4 {
 section.rates .cont .box .charts .chart.chart-one .chart-cont {
 }
 section.rates .cont .box .charts .chart.chart-one .chart-cont canvas {
-}
-section.rates .cont .box .charts .chart.chart-two {
-}
-section.rates .cont .box .charts .chart.chart-two h4 {
-}
-section.rates .cont .box .charts .chart.chart-two .chart-cont {
-}
-section.rates .cont .box .charts .chart.chart-two .chart-cont canvas {
 }
 
 /* ==========[END RATES]========== */
