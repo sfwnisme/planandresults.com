@@ -1,4 +1,4 @@
-const ctx = document.getElementById("myChart").getContext("2d");
+const ctx2 = document.getElementById("myChart2").getContext("2d");
 
 const labels = [
   "JAN",
@@ -40,7 +40,7 @@ const data = {
   ],
 };
 
-const config = {
+const config2 = {
   // type of the graph
   type: "bar",
   data: data,
@@ -100,4 +100,4 @@ const config = {
   },
 };
 
-const myChart = new Chart(ctx, config);
+const myChart2 = new Chart(ctx2, config2);
