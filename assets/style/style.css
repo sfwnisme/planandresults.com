@@ -80,18 +80,18 @@ body {
 /* ==========[ROOT]========== */
 :root {
   /* --main-color: #543c32; */
-  --main-color: hsl(331, 73%, 36%);
-  --main-color-transparent: hwb(331 10% 38% / 0.7);
-  /* --main-color-transparent: rgba(84, 60, 50, 0.7); */
-  --main-color-light: hsl(334deg 62% 64%);
-  --border-color: hsl(331, 22%, 79%);
-  --font-main-color: #121212;
-  --font-primary-color: #fff;
-  --traffic-color: #aeb946;
-  --traffic-color: #fbb74c;
-  --box-paragraph-color: #717171;
-  --box-tages-bg-color: #eee;
-  --box-tages-color: #898989;
+  --hwb: 331 10% 38%;
+  --main-color: hwb(var(--hwb));
+  --main-color-transparent: hwb(var(--hwb) / 0.7);
+  --main-color-light: hwb(334 42% 14%);
+  --border-color: hwb(331 75% 16%);
+  --font-main-color: hwb(0 7% 93%);
+  --font-primary-color: hwb(0 100% 0%);
+  --traffic-color: hwb(66 27% 27%);
+  --traffic-color: hwb(37 30% 2%);
+  --box-paragraph-color: hwb(0 44% 56%);
+  --box-tages-bg-color: hwb(0 93% 7%);
+  --box-tages-color: hwb(0 54% 46%);
 }
 
 /* ==========[START STYLING]========== */
@@ -217,29 +217,29 @@ hr {
     gap: 15px;
   }
 }
-.more p {
+.more span {
   color: var(--font-main-color);
   font-size: 20px;
   font-weight: 300;
   /* display: flex; */
 }
 @media (max-width: 1199px) {
-  .more p {
+  .more span {
     font-size: 20px;
   }
 }
 @media (max-width: 1023px) {
-  .more p {
+  .more span {
     font-size: 18px;
   }
 }
 @media (max-width: 767px) {
-  .more p {
+  .more span {
     font-size: 16px;
   }
 }
 @media (max-width: 480px) {
-  .more p {
+  .more span {
     font-size: 16px;
   }
 }
@@ -280,7 +280,7 @@ hr {
 
 /* ==========[START NAVIGATOIN]========== */
 nav {
-  background-color: rgba(0, 0, 0, 0.404);
+  background-color: var(--main-color-transparent);
   backdrop-filter: blur(3px);
   position: fixed;
   top: 0;
@@ -1260,7 +1260,7 @@ section.services-section
 /* ==========[START WHY CHOOSE US]========== */
 
 section.why-us {
-  background-color: var(--font-main-color);
+  background-color: var(--main-color);
 }
 
 section.why-us .cont {
@@ -1385,14 +1385,14 @@ section.why-us .cont .box .text-box .content .content-box.c-one .more {
     bottom: -100px;
   }
 }
-section.why-us .cont .box .text-box .content .content-box.c-one .more p {
+section.why-us .cont .box .text-box .content .content-box.c-one .more span {
   color: var(--font-primary-color) !important;
 }
 section.why-us .cont .box .text-box .content .content-box.c-one .more svg {
   fill: var(--font-primary-color) !important;
 }
 section.why-us .cont .box .text-box .content .content-box.c-two {
-  max-width: 550px;
+  max-width: 800px;
   margin-right: auto;
   display: flex;
   flex-direction: column;
@@ -1400,13 +1400,11 @@ section.why-us .cont .box .text-box .content .content-box.c-two {
 }
 @media (max-width: 1199px) {
   section.why-us .cont .box .text-box .content .content-box.c-two {
-    max-width: 700px;
     margin-right: auto;
   }
 }
 @media (max-width: 1023px) {
   section.why-us .cont .box .text-box .content .content-box.c-two {
-    max-width: 700px;
     margin-right: auto;
   }
 }
@@ -1423,7 +1421,7 @@ section.why-us .cont .box .text-box .content .content-box.c-two {
   }
 }
 section.why-us .cont .box .text-box .content .content-box.c-two p {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 200;
   line-height: 1.6;
 }
@@ -1614,6 +1612,11 @@ section.rates .cont .box .charts {
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 100px;
+  /* transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg); */
 }
 section.rates .cont .box .charts .chart {
   margin-right: auto;

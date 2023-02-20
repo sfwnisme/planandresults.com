@@ -151,6 +151,7 @@ const data = {
   datasets: [
     {
       label: "Dataset 1",
+      // K = 3 numbers | M = 4 numbers
       data: [563, 420, 136, 670, 583, 465, 543, 170, 732, 290, 20, 340],
       // name of the label
       label: "Hunger 2021",
@@ -168,7 +169,6 @@ const data = {
       pointBorderColor: "hwb(331 10% 38% / 0.6)",
       // color: 'red'
       pointRadius: 2,
-
     },
     {
       label: "Dataset 2",
@@ -233,9 +233,18 @@ const data = {
   ],
 };
 
+let documentWidth = document.documentElement.clientWidth;
+let chartType = "";
+if (documentWidth >= 800) {
+  chartType = "bar";
+} else {
+  chartType = "line";
+}
 const config = {
   // type of the graph
-  type: "line",
+
+  type: chartType,
+
   data: data,
   options: {
     // point size

@@ -1,5 +1,9 @@
 AOS.init();
 
+/* IMPORT */
+import cursor from "./assets/extensions/cursor.js";
+cursor();
+
 let nav = document.querySelector("nav");
 let navIcon = document.querySelector(".nav-icon");
 let navPath = document.querySelector(".nav-icon svg path:last-of-type");
