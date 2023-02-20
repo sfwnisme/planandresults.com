@@ -91,13 +91,13 @@ export default function cursor() {
     element.forEach((ele) => {
       ele.addEventListener("mouseover", (e) => {
         one.classList.add("active-text");
-        two.classList.add("disable");
+        // two.classList.add("disable");
       });
     });
     element.forEach((ele) => {
       ele.addEventListener("mouseout", (e) => {
         one.classList.remove("active-text");
-        two.classList.remove("disable");
+        // two.classList.remove("disable");
       });
     });
     element.forEach((ele) => {
@@ -130,7 +130,7 @@ export default function cursor() {
  * * [x] <h6>
  * * * * * * * *
  * * *GITHUB* * *
- * * *sfwnisme* *
+ * *@sfwnisme* *
  * * * * * * * *
  *
  */

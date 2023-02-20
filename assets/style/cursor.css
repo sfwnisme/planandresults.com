@@ -13,7 +13,7 @@ body {
 :root {
   --cursor-one: 40px;
   --cursor-one-text: calc(var(--cursor-one) * 0.8);
-  --cursor-one-text-width: 2px;
+  --cursor-one-text-width: 4px;
   --cursor-one-active: calc(var(--cursor-one) * 2);
   --cursor-one-clicked: calc(var(--cursor-one-active) * 1.5);
   --cursor-one-clicked-text: calc(var(--cursor-one-active) * 0.1);
@@ -77,6 +77,9 @@ body {
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
+  animation: 900ms cursorText infinite ease-in;
+  -webkit-animation: 900ms cursorText infinite ease-in;
+  opacity: 1;
 }
 .cursor-one.clicked {
   background-color: rgba(0, 0, 0, 0.564);
@@ -116,4 +119,12 @@ body {
 }
 .cursor-two.disable {
   display: var(--cursor-two-disable);
+}
+
+/* KEYFRAMES */
+@keyframes cursorText {
+  50% {
+    opacity: 0.4;
+    height: calc(var(--cursor-one-text) * 1.1);
+  }
 }

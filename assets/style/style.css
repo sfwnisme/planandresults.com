@@ -1574,6 +1574,7 @@ section.rates .cont .box .special-title h1 {
   font-weight: 300;
   margin-right: auto;
   max-width: 800px;
+  border-bottom: 1px solid black;
 }
 @media (max-width: 1199px) {
   section.rates .cont .box .special-title h1 {
@@ -1612,11 +1613,6 @@ section.rates .cont .box .charts {
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 100px;
-  /* transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg); */
 }
 section.rates .cont .box .charts .chart {
   margin-right: auto;
