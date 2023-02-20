@@ -1649,7 +1649,7 @@ section.rates .cont .box .charts .chart .chart-cont {
 }
 
 section.rates .cont .box .charts .chart .chart-cont canvas {
-  background-color: rgb(62, 0, 66);
+  /* background-color: rgb(62, 0, 66); */
   padding: 10px;
 }
 @media (max-width: 1199px) {
