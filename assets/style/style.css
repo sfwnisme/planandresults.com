@@ -1655,25 +1655,21 @@ section.rates .cont .box .charts .chart .chart-cont canvas {
 }
 @media (max-width: 1199px) {
   section.rates .cont .box .charts .chart .chart-cont canvas {
-    background-color: rgb(62, 0, 66);
     padding: 10px;
   }
 }
 @media (max-width: 1023px) {
   section.rates .cont .box .charts .chart .chart-cont canvas {
-    background-color: rgb(62, 0, 66);
     padding: 10px;
   }
 }
 @media (max-width: 767px) {
   section.rates .cont .box .charts .chart .chart-cont canvas {
-    background-color: rgb(62, 0, 66);
     padding: 10px;
   }
 }
 @media (max-width: 480px) {
   section.rates .cont .box .charts .chart .chart-cont canvas {
-    background-color: rgb(62, 0, 66);
     padding: 10px;
   }
 }

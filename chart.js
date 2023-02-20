@@ -155,19 +155,20 @@ const data = {
       // name of the label
       label: "Hunger 2021",
       // fill status
-      fill: true,
+      fill: false,
       // graph background-color
       // backgroundColor: "hwb(331 10% 38% / 0.3)",
       backgroundColor: ["hsl(37deg 96% 64%/ 30%)"],
       // backgroundColor: ["#ff6384", "#36a2eb", "#cc65fe", "#ffce56"],
       // lines border color
-      borderColor: "hwb(331 10% 38% / 0.3)",
+      borderColor: ["hsl(37deg 96% 64%/ 30%)"],
       // point background-color
-      pointBackgroundColor: "hwb(331 10% 38% / 0.6)",
+      pointBackgroundColor: ["hsl(37deg 96% 64%/ 100%)"],
       //point border color
       pointBorderColor: "hwb(331 10% 38% / 0.6)",
-      tension: 0.2,
       // color: 'red'
+      pointRadius: 2,
+
     },
     {
       label: "Dataset 2",
@@ -175,19 +176,19 @@ const data = {
       // name of the label
       label: "Hunger 2022",
       // fill status
-      fill: true,
+      fill: false,
       // graph background-color
       // backgroundColor: "hwb(331 10% 38% / 0.3)",
       backgroundColor: ["hsl(37deg 96% 64%/ 70%)"],
       // backgroundColor: ["#ff6384", "#36a2eb", "#cc65fe", "#ffce56"],
       // lines border color
-      borderColor: "hwb(331 10% 38% / 0.3)",
+      borderColor: ["hsl(37deg 96% 64%/ 70%)"],
       // point background-color
-      pointBackgroundColor: "hwb(331 10% 38% / 0.6)",
+      pointBackgroundColor: ["hsl(37deg 96% 64%/ 100%)"],
       //point border color
-      pointBorderColor: "hwb(331 10% 38% / 0.6)",
-      tension: 0.2,
       // color: 'red'
+      pointBorderColor: "hwb(331 10% 38% / 0.6)",
+      pointRadius: 2,
     },
     {
       label: "Dataset 3",
@@ -195,19 +196,18 @@ const data = {
       // name of the label
       label: "Mievic 2021",
       // fill status
-      fill: true,
+      fill: false,
       // graph background-color
       // backgroundColor: "hwb(331 10% 38% / 0.3)",
       backgroundColor: ["hsl(141deg 100% 67%/ 30%)"],
       // backgroundColor: ["#ff6384", "#36a2eb", "#cc65fe", "#ffce56"],
       // lines border color
-      borderColor: "hwb(331 10% 38% / 0.3)",
+      borderColor: ["hsl(141deg 100% 67%/ 30%)"],
       // point background-color
-      pointBackgroundColor: "hwb(331 10% 38% / 0.6)",
+      pointBackgroundColor: ["hsl(141deg 100% 67%/ 100%)"],
       //point border color
       pointBorderColor: "hwb(331 10% 38% / 0.6)",
-      tension: 0.2,
-      // color: 'red'
+      pointRadius: 2,
     },
     {
       label: "Dataset 4",
@@ -215,42 +215,27 @@ const data = {
       // name of the label
       label: "Mievic 2022",
       // fill status
-      fill: true,
+      fill: false,
       // graph background-color
       // backgroundColor: "hwb(331 10% 38% / 0.3)",
       backgroundColor: ["hsl(141deg 100% 67%/ 70%)"],
       // backgroundColor: ["#ff6384", "#36a2eb", "#cc65fe", "#ffce56"],
       // lines border color
-      borderColor: "hwb(331 10% 38% / 0.3)",
+      borderColor: ["hsl(141deg 100% 67%/ 70%)"],
       // point background-color
-      pointBackgroundColor: "hwb(331 10% 38% / 0.6)",
+      pointBackgroundColor: ["hsl(141deg 100% 67%/ 100%)"],
       //point border color
       pointBorderColor: "hwb(331 10% 38% / 0.6)",
       tension: 0.2,
       // color: 'red'
+      pointRadius: 2,
     },
   ],
 };
 
-const config2 = {
-  type: "bar",
-  data: data,
-  options: {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: "top",
-      },
-      title: {
-        display: true,
-        text: "plan and results TRAFFICS",
-      },
-    },
-  },
-};
 const config = {
   // type of the graph
-  type: "bar",
+  type: "line",
   data: data,
   options: {
     // point size
@@ -267,7 +252,7 @@ const config = {
         display: true,
         text: "plan and results TRAFFICS",
         font: {
-          size: 17,
+          size: 12,
           weight: 800,
         },
       },
@@ -278,6 +263,7 @@ const config = {
             size: 12,
             weight: "100",
           },
+          usePointStyle: true,
         },
       },
     },
