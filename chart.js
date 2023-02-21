@@ -258,11 +258,12 @@ const config = {
     plugins: {
       // the title of the chart.js
       title: {
-        display: true,
-        text: "plan and results TRAFFICS",
+        // disabled the title due to get more HIEGHT for the chart on mobile
+        display: false,
+        text: "احصائيات خطة ونتائج",
         font: {
-          size: 12,
-          weight: 800,
+          size: 15,
+          weight: 400,
         },
       },
       legend: {
