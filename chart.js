@@ -159,7 +159,7 @@ const data = {
       fill: false,
       // graph background-color
       // backgroundColor: "hwb(331 10% 38% / 0.3)",
-      backgroundColor: ["hsl(37deg 96% 64%/ 30%)"],
+      backgroundColor: ["hsl(37deg 96% 64%/ 50%)"],
       // backgroundColor: ["#ff6384", "#36a2eb", "#cc65fe", "#ffce56"],
       // lines border color
       borderColor: ["hsl(37deg 96% 64%/ 30%)"],
@@ -179,7 +179,7 @@ const data = {
       fill: false,
       // graph background-color
       // backgroundColor: "hwb(331 10% 38% / 0.3)",
-      backgroundColor: ["hsl(37deg 96% 64%/ 70%)"],
+      backgroundColor: ["hsl(37deg 96% 64%/ 100%)"],
       // backgroundColor: ["#ff6384", "#36a2eb", "#cc65fe", "#ffce56"],
       // lines border color
       borderColor: ["hsl(37deg 96% 64%/ 70%)"],
@@ -199,7 +199,7 @@ const data = {
       fill: false,
       // graph background-color
       // backgroundColor: "hwb(331 10% 38% / 0.3)",
-      backgroundColor: ["hsl(141deg 100% 67%/ 30%)"],
+      backgroundColor: ["hsl(141deg 100% 67%/ 50%)"],
       // backgroundColor: ["#ff6384", "#36a2eb", "#cc65fe", "#ffce56"],
       // lines border color
       borderColor: ["hsl(141deg 100% 67%/ 30%)"],
@@ -218,7 +218,7 @@ const data = {
       fill: false,
       // graph background-color
       // backgroundColor: "hwb(331 10% 38% / 0.3)",
-      backgroundColor: ["hsl(141deg 100% 67%/ 70%)"],
+      backgroundColor: ["hsl(141deg 100% 67%/ 100%)"],
       // backgroundColor: ["#ff6384", "#36a2eb", "#cc65fe", "#ffce56"],
       // lines border color
       borderColor: ["hsl(141deg 100% 67%/ 70%)"],
@@ -325,7 +325,7 @@ const config = {
         ticks: {
           callback: function (value) {
             value.length = 1;
-            console.log(+value.toString());
+            // console.log(+value.toString());
             if (value >= 1000) {
               // this process to get the first number and the second number to the short million format
               return `${+value.toString().slice(0, 1)}.${+value
