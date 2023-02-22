@@ -21,7 +21,7 @@ navIcon.addEventListener("click", (e) => {
   nav.classList.toggle("active");
   navIcon.firstElementChild.classList.toggle("active");
   // logo.src = "./assets/images/logo-white.png";
-  logo.src = "./assets/images/logo.png";
+  logo.src = "./assets/images/logo-pink.png";
   navPath.setAttribute("d", "M4 16l16 0");
   if (!navCont.classList.contains("active")) {
     logo.src = "./assets/images/logo-white.png";
