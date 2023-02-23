@@ -2303,7 +2303,17 @@ section.contact-us .cont .box form .input-box {
   gap: 20px;
 }
 
-section.contact-us .cont .box form .input-box .input-number {}
+@media (max-width: 767px) {
+  section.contact-us .cont .box form .input-box {
+    gap: 15px;
+    flex-direction: column;
+  }
+}
+
+section.contact-us .cont .box form .input-box .input-number {
+  width: -moz-fit-content;
+  width: fit-content;
+}
 
 section.contact-us .cont .box form .input-box .input-number span {
   color: var(--main-color-light);
