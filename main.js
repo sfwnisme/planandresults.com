@@ -29,3 +29,10 @@ navIcon.addEventListener("click", (e) => {
   }
   navSocial.classList.toggle("nav-social-active");
 });
+
+//,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+let shortLinks = document.querySelector(".short-links")
+let cloneNav = navCont
+shortLinks.append(navCont)
+console.log(cloneNav)

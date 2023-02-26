@@ -2,16 +2,22 @@ html,
 * {
   cursor: none;
 }
+
 body {
   overflow-x: hidden;
 }
+
 @media (max-width: 700px) {
   * {
     cursor: auto !important;
   }
 }
+
 :root {
-  --cursor-one: 40px;
+  /* --cursor-color: hwb(334 66% 0%); */
+  --cursor-color: hwb(37 30% 2%);
+  --cursor-two-color: hwb(37 66% 0%);
+  --cursor-one: 30px;
   --cursor-one-text: calc(var(--cursor-one) * 0.8);
   --cursor-one-text-width: 4px;
   --cursor-one-active: calc(var(--cursor-one) * 2);
@@ -20,9 +26,10 @@ body {
   --cursor-two: 4px;
   --cursor-two-disable: none;
   --cursor-strok: 3px;
-  --opacity: 0.2;
+  --opacity: 0.5;
   --font-two: black;
 }
+
 .cursor-box {
   overflow: visible;
 
@@ -35,10 +42,12 @@ body {
     display: none;
   }
 }
+
 .cursor-one {
+  background-color: var(--cursor-color);
   width: var(--cursor-one);
   height: var(--cursor-one);
-  border: var(--cursor-strok) solid var(--font-main-color);
+  border: var(--cursor-strok) solid var(--cursor-color);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -59,16 +68,19 @@ body {
   /*thisoverflowwillforceAOSlibrarytonothidethecursor*/
   overflow: visible !important;
   z-index: 10;
+
 }
+
 .cursor-one.active {
-  background-color: var(--font-two);
+  /* background-color: transparent; */
   height: var(--cursor-one-active);
   width: var(--cursor-one-active);
-  border: none;
+  /* border: none; */
   opacity: var(--opacity);
 }
+
 .cursor-one.active-text {
-  background-color: var(--font-two);
+  background-color: var(--cursor-color);
   height: var(--cursor-one-text);
   width: var(--cursor-one-text-width);
   border: none;
@@ -81,20 +93,23 @@ body {
   -webkit-animation: 900ms cursorText infinite ease-in;
   opacity: 1;
 }
+
 .cursor-one.clicked {
-  background-color: rgba(0, 0, 0, 0.564);
+  background-color: var(--cursor-color);
   height: var(--cursor-one-clicked);
   width: var(--cursor-one-clicked);
   border: none;
 }
+
 .cursor-one.clicked-text {
-  background-color: rgba(0, 0, 0, 0.564);
+  background-color: var(--cursor-color);
   height: var(--cursor-one-clicked-text);
   width: var(--cursor-one-clicked-text);
   border: none;
 }
+
 .cursor-two {
-  background-color: var(--font-two);
+  background-color: var(--cursor-two-color);
   width: var(--cursor-two);
   height: var(--cursor-two);
   display: block;
@@ -117,6 +132,7 @@ body {
   border-radius: 50%;
   overflow: visible;
 }
+
 .cursor-two.disable {
   display: var(--cursor-two-disable);
 }

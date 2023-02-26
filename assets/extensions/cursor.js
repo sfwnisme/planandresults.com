@@ -3,7 +3,6 @@ export default function cursor() {
   // cursor box
   let cursorBox = document.createElement("div");
   cursorBox.className = "cursor-box";
-
   // cursor elements
   let cursorOne = document.createElement("div");
   cursorOne.className = "cursor-one";
@@ -45,6 +44,7 @@ export default function cursor() {
   let allH4 = document.querySelectorAll("h4");
   let allH5 = document.querySelectorAll("h5");
   let allH6 = document.querySelectorAll("h6");
+  let textarea = document.querySelectorAll("textarea");
 
   // clickable text
   addAndRemove(allbtns, cursorOne, cursorTwo);
@@ -59,6 +59,7 @@ export default function cursor() {
   addAndRemoveText(allH4, cursorOne, cursorTwo);
   addAndRemoveText(allH5, cursorOne, cursorTwo);
   addAndRemoveText(allH6, cursorOne, cursorTwo);
+  addAndRemoveText(textarea, cursorOne, cursorTwo);
 
   // all clickable elements function
   function addAndRemove(element, one, two) {
@@ -90,14 +91,18 @@ export default function cursor() {
   function addAndRemoveText(element, one, two) {
     element.forEach((ele) => {
       ele.addEventListener("mouseover", (e) => {
-        one.classList.add("active-text");
-        // two.classList.add("disable");
+        if (e.currentTarget.parentElement.nodeName !== 'A') {
+          // two.classList.add("disable");
+          one.classList.add("active-text");
+        } else {
+          one.classList.remove("active-text");
+        }
       });
+
     });
     element.forEach((ele) => {
       ele.addEventListener("mouseout", (e) => {
         one.classList.remove("active-text");
-        // two.classList.remove("disable");
       });
     });
     element.forEach((ele) => {
@@ -107,6 +112,7 @@ export default function cursor() {
         setTimeout(() => {
           one.classList.remove("clicked-text");
         }, 50);
+        // e.target.stopPropagation()
       });
     });
   }
@@ -132,5 +138,7 @@ export default function cursor() {
  * * *GITHUB* * *
  * *@sfwnisme* *
  * * * * * * * *
- *
+ ***PROPLEMS
+ * sefari browser on Mac devices lagging the cursor
+ * must change the css properties to the css file not html internal
  */
