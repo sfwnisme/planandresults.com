@@ -21,7 +21,7 @@ navIcon.addEventListener("click", (e) => {
   nav.classList.toggle("active");
   navIcon.firstElementChild.classList.toggle("active");
   // logo.src = "./assets/images/logo-white.png";
-  logo.src = "./assets/images/logo-pink.png";
+  logo.src = "./assets/images/logo-white.png";
   navPath.setAttribute("d", "M4 16l16 0");
   if (!navCont.classList.contains("active")) {
     logo.src = "./assets/images/logo-white.png";
@@ -32,7 +32,15 @@ navIcon.addEventListener("click", (e) => {
 
 //,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 
+// let cloneNav = navCont
+// console.log(cloneNav)
 let shortLinks = document.querySelector(".short-links")
-let cloneNav = navCont
-shortLinks.append(navCont)
-console.log(cloneNav)
+let cloned = navCont.cloneNode(true);
+shortLinks.append(cloned)
+
+window.addEventListener("load", () => {
+  console.log(cloned)
+  if (shortLinks !== '') {
+    shortLinks.append(cloned)
+  }
+})
