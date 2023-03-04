@@ -91,10 +91,15 @@ body {
 /* ==========[ROOT]========== */
 :root {
   /* --main-color: #543c32; */
+  /* main layer */
   --hwb: 331 10% 38%;
+  /* dark layer */
+  --hwb: 331 5% 42%;
+  /* darker layer */
+  /* --hwb: 331 5% 80%; */
   --main-color: hwb(var(--hwb));
-  --grade-color: hwb(331 10% 38%);
-  --main-color-transparent: hwb(var(--hwb) / 0.5);
+  --grade-color: hwb(331 5% 76%);
+  --main-color-transparent: hwb(var(--hwb) / 0.3);
   --main-color-light: hwb(334 50% 14%);
   --border-color: hwb(331 75% 16%);
   --font-main-color: hwb(0 7% 93%);
@@ -553,6 +558,27 @@ nav .cont ul li {
   cursor: pointer;
 }
 
+nav .cont ul li a.active {
+  /* background-color: black; */
+  position: relative;
+}
+
+nav .cont ul li a.active::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  background-color: white;
+  height: 1.5px;
+  width: 100%;
+  transition: 150ms width;
+  -webkit-transition: 150ms width;
+  -moz-transition: 150ms width;
+  -ms-transition: 150ms width;
+  -o-transition: 150ms width;
+  z-index: 2;
+}
+
 @media (max-width: 1023px) {
   nav .cont ul li {
     border-bottom: 1px solid var(--font-primary-color);
@@ -560,6 +586,13 @@ nav .cont ul li {
     padding: 0px 0px;
     height: 80px;
     justify-content: start;
+  }
+
+  nav .cont ul {
+    /* display: none; */
+    /* background-color: red; */
+    padding-bottom: 100px;
+
   }
 }
 
@@ -578,7 +611,7 @@ nav .cont ul li a {
 @media (max-width: 1023px) {
   nav .cont ul li a {
     color: var(--font-primary-color);
-    font-size: 20px;
+    font-size: 16px;
     width: inherit;
     flex-grow: 1;
   }
@@ -694,8 +727,8 @@ nav .cont ul li.nav-social a {
 
 
 nav .cont ul li.nav-social a svg {
-  width: 100%;
-  height: 100%;
+  width: 30px;
+  height: 30px;
 }
 
 nav .cont .nav-icon {}
@@ -2683,11 +2716,13 @@ footer .cont .box .links .short-links ul li a {
     font-size: 16px;
   }
 }
-a:active  {
-    color: var(--font-main-color);
-  
-  
+
+a:active {
+  color: var(--font-main-color);
+
+
 }
+
 footer .cont .box .rules {
   display: flex;
 }
