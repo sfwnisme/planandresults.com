@@ -597,8 +597,17 @@ nav .cont ul li a {
 @media (max-width: 1023px) {
   nav .cont ul li a {
     color: var(--font-primary-color);
-    font-size: 16px;
+    font-size: 18px;
     width: inherit;
+    flex-grow: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  nav .cont ul li a {
+    color: var(--font-primary-color);
+    font-size: 16px;
+    font-weight: 200;
     flex-grow: 1;
   }
 }
@@ -637,10 +646,18 @@ nav .cont ul li a.active {
   font-weight: 900;
 }
 
+@media (max-width: 480px) {
+  nav .cont ul li a.active {
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
 nav .cont ul li a.active::before {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: 0;
   right: 0;
   background-color: rgba(255, 255, 255, 0.429);
   height: 1px;
@@ -769,6 +786,9 @@ nav .cont .nav-icon .icon-tabler.active {
 }
 
 /* ==========[START LANDING PAGE]========== */
+.layer {
+  height: initial;
+}
 main {
   background-color: var(--main-color);
   min-height: 100vh;
