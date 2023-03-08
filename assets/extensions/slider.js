@@ -34,10 +34,10 @@ let clientName = document.querySelector('[data-info=client-name]')
 let clientPosition = document.querySelector('[data-info=client-position]')
 let next = document.querySelector('.swipers .next')
 let prev = document.querySelector('.swipers .prev')
+console.log(commentBox)
 
 let count = 1;
-console.log(next)
-console.log(prev)
+
 
 // EVENTS 
 next.addEventListener("click", nextComment)
@@ -47,7 +47,7 @@ prev.addEventListener("click", prevComment)
 /* FUNCTIONS */
 // PARENT FUNCTION 
 function slider() {
-  console.log(clientInfo)
+  // console.log(clientInfo)
   swip()
 }
 // SWIP CONTENT FUNCTION
